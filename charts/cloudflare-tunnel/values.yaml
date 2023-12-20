@@ -26,6 +26,9 @@ cloudflare:
     # - hostname: hello.example.com
     #   service: hello_world
 
+  # Fallback service if no rules matched
+  ingressDefaultService: http_status:404
+
 image:
   repository: cloudflare/cloudflared
   pullPolicy: IfNotPresent
